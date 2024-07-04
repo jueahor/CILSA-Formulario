@@ -10,21 +10,30 @@
 <body>
     <div class="container">
         <h1>Formulario de Registro de Datos</h1>
-        <form id="registrationForm">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre">
-            
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido">
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            
-            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
-            
-            <label for="provincia">Provincia:</label>
-            <select id="provincia" name="provincia">
+               <form id="registrationForm">
+            <div>
+                <label id="nombreLabel" for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" aria-labelledby="nombreLabel">
+                	            <div class="error-message"></div>
+            </div>
+            <div>
+                <label id="apellidoLabel" for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" aria-labelledby="apellidoLabel">
+                	           <div class="error-message"></div>
+            </div>
+            <div>
+                <label id="emailLabel" for="email">Email:</label>
+                <input type="email" id="email" name="email" aria-labelledby="emailLabel">
+                	  <div class="error-message"></div>
+            </div>
+            <div>
+                <label id="fechaNacimientoLabel" for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" aria-labelledby="fechaNacimientoLabel">
+                	  <div class="error-message"></div>
+            </div>
+            <div>
+                <label id="provinciaLabel" for="provincia">Provincia:</label>
+                <select id="provincia" name="provincia" aria-labelledby="provinciaLabel">
                 <option value="">Seleccione una provincia</option>
                 <option value="Buenos Aires">Buenos Aires</option>
                 <option value="Caba">C.A.B.A.</option>
@@ -51,7 +60,8 @@
                 <option value="Tierra del Fuego">Tierra del Fuego</option>
                 <option value="Tucumán">Tucumán</option>
             </select>
-            
+                       <div class="error-message"></div>
+            </div>
             <button type="submit">Enviar</button>
         </form>
         <button id="toggleTheme">Modo Oscuro/Claro</button>
